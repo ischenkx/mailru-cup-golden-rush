@@ -1,0 +1,88 @@
+{
+  "logger": {
+    "enabled": true,
+    "interval": "3m"
+  },
+  "api": {
+    "http": {
+      "dial_context": {
+        "timeout": "30s",
+        "keep_alive": "90s"
+      },
+      "client_timeout": "30s",
+      "max_idle_conns": 10000,
+      "max_idle_conns_per_host": 10000,
+      "max_conns_per_host": 10000,
+      "idle_conn_timeout": "0"
+    },
+    "dig_poller": {
+      "timeout": "30s",
+      "interval": "0",
+      "max_iters": -1
+    },
+    "health_check_poller": {
+      "timeout": "30s",
+      "interval": "500ms",
+      "max_iters": 60
+    },
+    "cash_poller": {
+      "timeout": "30s",
+      "interval": "0",
+      "max_iters": 6
+    },
+    "explore_poller": {
+      "timeout": "9s",
+      "interval": "0",
+      "max_iters": 10
+    },
+    "balance_poller": {
+      "timeout": "30s",
+      "interval": "0",
+      "max_iters": 9
+    },
+    "issue_license_poller": {
+      "timeout": "30s",
+      "interval": "0",
+      "max_iters": 9
+    },
+    "list_licenses_poller": {
+      "timeout": "30s",
+      "interval": "0",
+      "max_iters": 9
+    }
+  },
+  "app": {
+    "cashers": 150,
+    "license_issuers": 60,
+    "explorers": 180,
+    "diggers":  1500,
+    "pre_explore_workers": 300,
+    "max_block_per_pre_explore_worker": 1000,
+    "pre_exploration_timeout": "45s",
+    "min_treasures_per_block": 1,
+    "world": {
+      "sx": 1,
+      "sy": 1,
+      "width": 3500,
+      "height": 3500,
+      "depth": 10,
+      "depth_optimizer": {
+        "k": 17,
+        "g": 4500
+      }
+    },
+    "block": {
+      "width": 2,
+      "height": 3,
+      "auto": false
+    },
+    "license": {
+      "price_list": {
+        "experiments": 1000,
+        "k": 20,
+        "g": 0.1
+      },
+      "max_amount": 10
+    }
+  }
+}

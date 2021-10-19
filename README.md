@@ -1,0 +1,1 @@
+https://github.com/ischenkx/mailru-cup-golden-rush.git
