@@ -1,1 +1,1 @@
-https://github.com/ischenkx/mailru-cup-golden-rush.git
+My solution for mail.ru "golden rush" contest.
